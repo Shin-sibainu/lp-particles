@@ -6,7 +6,7 @@ import * as dat from "lil-gui";
 /**
  * デバッグ(色つけるときに追加)
  */
-const gui = new dat.GUI();
+// const gui = new dat.GUI();
 
 /**
  * 必須の3要素
@@ -80,11 +80,12 @@ const particle = new THREE.Points(particleGeometry, particleMaterial);
 scene.add(donutParticle, particle);
 
 //debug
-gui.addColor(donutParticleMaterial, "color");
+// gui.addColor(donutParticleMaterial, "color");
 
 //カメラ制御
 const controls = new OrbitControls(camera, canvas);
 controls.enableDamping = true;
+controls.enablePan = false;
 
 /**
  * アニメーション
